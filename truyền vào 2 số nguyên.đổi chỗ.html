@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="myInput" />
+<button type="button" onclick="add()">ADD</button>
+<button type="button" onclick="check()">CHECK</button>
+<p id="view"></p>
+<p id="view1"></p>
+<script>
+    let arr = [];
+function add() {
+    let number = parseInt(document.getElementById("myInput").value);
+    arr.push(number);
+    document.getElementById("myInput").value = ""
+}
+function check() {
+
+    let a = arr[0];
+    arr[0] = arr[1];
+    arr[1] = a;
+
+    document.getElementById("view1").innerHTML = "mảng sau khi chuyển là "+arr;
+}
+</script>
+</body>
+</html>
