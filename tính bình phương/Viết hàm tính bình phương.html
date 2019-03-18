@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+please input!
+<input type="text" id="yourInput">
+<button type="button" onclick="check()">submit</button>
+<p id="view"></p>
+<script>
+    function arr(number) {
+        let result = number * number;
+        return result;
+    }
+    function check() {
+        let valueInput = parseFloat(document.getElementById("yourInput").value);
+        let a = arr(valueInput);
+        document.getElementById("view").innerHTML = "binh phuong cua "+valueInput+" la "+a;
+    }
+</script>
+</body>
+</html>

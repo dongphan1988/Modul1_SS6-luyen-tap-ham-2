@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="myInput"/>
+<button type="button" onclick="add()">ADD</button>
+<button type="button" onclick="check()">CHECK</button>
+<input type="text" disabled id="hidden"/>
+<script>
+    let arr = [];
+    let valueInput;
+
+    function add() {
+        valueInput = parseInt( document.getElementById( "myInput" ).value );
+        arr.push( valueInput );
+        document.getElementById("myInput").value = "";
+    }
+function check() {
+        let min = arr[0];
+    for(let i =0;i<arr.length;i++){
+        if(min>arr[i]){
+            min = arr[i];
+        }
+    }document.getElementById("hidden").value = "min = "+min;
+
+}
+
+
+
+</script>
+</body>
+</html>

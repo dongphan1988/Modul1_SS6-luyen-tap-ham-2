@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+nhập ký tự vào mảng trống :
+<input type="text" id="inputArri"/>
+<button type="button" onclick="add()">Push</button>
+nhập ký tự cần kiểm tra:
+<input type="text" id="inputA"/>
+<button type="button" onclick="check()">Check</button>
+<p id="view"></p>
+<script>
+    let arr = [];
+    function add() {
+        let kitunhapvao = document.getElementById("inputArri").value;
+        arr.push(kitunhapvao);
+        document.getElementById("inputArri").value = "";
+    }
+    function check() {
+        let solan = 1;
+        let kitucancheck = document.getElementById("inputA").value;
+        for(let i =0;i<arr.length-1;i++){
+            if (kitucancheck == arr[i]){
+                solan++
+            }
+        }document.getElementById("view").innerHTML = solan;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="myInput"/>
+<input type="button" onclick="check()" value="check int">
+<p id="view"></p>
+<script>
+    function check() {
+        let number = parseFloat(document.getElementById("myInput").value);
+        if (number > 0 && number%1==0){
+            document.getElementById("view").innerHTML = number + " là số nguyên dương "
+        }else{
+            document.getElementById("view").innerHTML = number + " không phải là số nguyên dương "
+        }
+    }
+
+</script>
+</body>
+</html>

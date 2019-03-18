@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Nhap Ban Kinh</h1>
+<input type="text" id="nhapR"/> <br><br><br>
+<button type="button" onclick="check()">Dien Tich</button>
+<p id="dientich"></p> <br>
+<button type="button" onclick="check1()">chu vi</button>
+<p id="chuvi"></p> <br>
+<script>
+    function tinhdientich(number) {
+        let kqdientich = number*number*3.14;
+        return kqdientich;
+    }
+    function tinhchuvi(number) {
+        let kqchuvi = 2*number*3.14;
+        return kqchuvi;
+    }
+    function check(){
+    let r = parseFloat(document.getElementById("nhapR").value);
+    document.getElementById("dientich").innerHTML= "dien tich hinh trong la "+tinhdientich(r);
+    }
+    function check1(){
+        let r = parseFloat(document.getElementById("nhapR").value);
+        document.getElementById("chuvi").innerHTML= "dien tich hinh trong la "+tinhchuvi(r);
+    }
+</script>
+</body>
+</html>
